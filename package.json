@@ -4,7 +4,7 @@
   "description": "This application allows a user to generate two random teams for themselves and a friend to play with in a FIFA 21 match with the ability to register and track their previous results against their friends.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./fifamatchgenerator/frontend/src/index.js --output ./fifamatchgenerator/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./fifamatchgenerator/frontend/src/index.js --output ./fifamatchgenerator/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./fifamatchgenerator/frontend/src/index.js --output ./fifamatchgenerator/frontend/static/frontend/main.js"
   },
   "repository": {
