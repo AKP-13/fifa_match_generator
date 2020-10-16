@@ -4,8 +4,14 @@ from .serializers import ResultSerializer
 
 # Result Viewset
 class ResultViewSet(viewsets.ModelViewSet):
-    queryset = Result.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
+
     serializer_class = ResultSerializer
+
+    def get_queryset(self):
+        return self.request.user.results.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
