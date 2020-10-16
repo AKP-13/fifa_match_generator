@@ -9,7 +9,7 @@ export const getResults = () => dispatch => {
         dispatch({
             type: GET_RESULTS,
             payload: res.data
-        })
+        });
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
 }
