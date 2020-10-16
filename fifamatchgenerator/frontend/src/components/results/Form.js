@@ -39,7 +39,7 @@ export class Form extends Component {
 
         return (
             <div className="card card-body mt-4 mb-4">
-                <h2>Add Lead</h2>
+                <h2>Add Result</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Opponent Name</label>
