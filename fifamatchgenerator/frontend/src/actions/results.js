@@ -34,6 +34,9 @@ export const deleteResult = (id) => dispatch => {
 export const addResult = (result) => dispatch => {
     axios.post('/api/results/', result)
     .then(res => {
+        dispatch(createMessage({
+            addResult: "Result added."
+        }))
         dispatch({
             type: ADD_RESULT,
             payload: res.data

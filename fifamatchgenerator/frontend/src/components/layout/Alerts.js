@@ -37,6 +37,9 @@ export class Alerts extends Component {
             if(message.deleteResult) {
                 alert.success(message.deleteResult)
             }
+            if(message.addResult) {
+                alert.success(message.addResult)
+            }
         }
     }
 
