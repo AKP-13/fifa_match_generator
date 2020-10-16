@@ -8,6 +8,10 @@ export class Results extends Component {
         results: PropTypes.array.isRequired
     }
 
+    componentDidMount() {
+        this.props.getResults();
+    }
+
     render() {
         return (
             <div>
@@ -21,4 +25,4 @@ const mapStateToProps = state => ({
     results: state.results.results
 });
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps, { getResults })(Results);
