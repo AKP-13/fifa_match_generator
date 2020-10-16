@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getResults } from '../../actions/results';
+import { getResults, deleteResult } from '../../actions/results';
 
 export class Results extends Component {
     static propTypes = {
@@ -40,7 +40,7 @@ export class Results extends Component {
                                 <td>{result.opponentGoals}</td>
                                 <td>{result.opponentTeam}</td>
                                 <td>{result.notes}</td>
-                                <td><button className="btn btn-danger btn-sm">Delete</button></td>
+                                <td><button onClick={this.props.deleteResult.bind(this, result.id)} className="btn btn-danger btn-sm">Delete</button></td>
                             </tr>
                         )) }
                     </tbody>
@@ -55,4 +55,4 @@ const mapStateToProps = state => ({
     results: state.results.results
 });
 
-export default connect(mapStateToProps, { getResults })(Results);
+export default connect(mapStateToProps, { getResults, deleteResult })(Results);
