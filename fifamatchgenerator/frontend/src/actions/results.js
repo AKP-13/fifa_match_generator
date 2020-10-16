@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_RESULTS, DELETE_RESULT } from './types';
+import { GET_RESULTS, DELETE_RESULT, ADD_RESULT } from './types';
 
 // GET RESULTS
 export const getResults = () => dispatch => {
@@ -21,6 +21,18 @@ export const deleteResult = (id) => dispatch => {
         dispatch({
             type: DELETE_RESULT,
             payload: id
+        });
+    })
+    .catch(err => console.log(err));
+}
+
+// ADD RESULT
+export const addResult = (result) => dispatch => {
+    axios.post('/api/results/', result)
+    .then(res => {
+        dispatch({
+            type: ADD_RESULT,
+            payload: res.data
         });
     })
     .catch(err => console.log(err));
