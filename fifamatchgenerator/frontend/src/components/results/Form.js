@@ -31,6 +31,14 @@ export class Form extends Component {
             notes
         };
         this.props.addResult(result)
+        this.setState({
+            opponentName: "",
+            myTeam: "",
+            myGoals: "",
+            opponentGoals: "",
+            opponentTeam: "",
+            notes: ""
+        })
     }
 
     render() {
