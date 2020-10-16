@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_RESULTS, DELETE_RESULT, ADD_RESULT } from './types';
+import { GET_RESULTS, DELETE_RESULT, ADD_RESULT, GET_ERRORS } from './types';
 
 // GET RESULTS
 export const getResults = () => dispatch => {
@@ -35,5 +35,14 @@ export const addResult = (result) => dispatch => {
             payload: res.data
         });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+        const errors = {
+            msg: err.response.data,
+            status: err.response.status
+        }
+        dispatch({
+            type: GET_ERRORS,
+            payload: errors
+        })
+    });
 }

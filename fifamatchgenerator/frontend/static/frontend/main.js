@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getResults\", function() { return getResults; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deleteResult\", function() { return deleteResult; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addResult\", function() { return addResult; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ \"./fifamatchgenerator/frontend/src/actions/types.js\");\n\n // GET RESULTS\n\nvar getResults = function getResults() {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/results/').then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"GET_RESULTS\"],\n        payload: res.data\n      });\n    })[\"catch\"](function (err) {\n      return console.log(err);\n    });\n  };\n}; // DELETE RESULT\n\nvar deleteResult = function deleteResult(id) {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a[\"delete\"](\"/api/results/\".concat(id, \"/\")).then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"DELETE_RESULT\"],\n        payload: id\n      });\n    })[\"catch\"](function (err) {\n      return console.log(err);\n    });\n  };\n}; // ADD RESULT\n\nvar addResult = function addResult(result) {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/results/', result).then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"ADD_RESULT\"],\n        payload: res.data\n      });\n    })[\"catch\"](function (err) {\n      return console.log(err);\n    });\n  };\n};\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/actions/results.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getResults\", function() { return getResults; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deleteResult\", function() { return deleteResult; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addResult\", function() { return addResult; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ \"./fifamatchgenerator/frontend/src/actions/types.js\");\n\n // GET RESULTS\n\nvar getResults = function getResults() {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/results/').then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"GET_RESULTS\"],\n        payload: res.data\n      });\n    })[\"catch\"](function (err) {\n      return console.log(err);\n    });\n  };\n}; // DELETE RESULT\n\nvar deleteResult = function deleteResult(id) {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a[\"delete\"](\"/api/results/\".concat(id, \"/\")).then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"DELETE_RESULT\"],\n        payload: id\n      });\n    })[\"catch\"](function (err) {\n      return console.log(err);\n    });\n  };\n}; // ADD RESULT\n\nvar addResult = function addResult(result) {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/results/', result).then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"ADD_RESULT\"],\n        payload: res.data\n      });\n    })[\"catch\"](function (err) {\n      var errors = {\n        msg: err.response.data,\n        status: err.response.status\n      };\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"GET_ERRORS\"],\n        payload: errors\n      });\n    });\n  };\n};\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/actions/results.js?");
 
 /***/ }),
 
@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************************************************!*\
   !*** ./fifamatchgenerator/frontend/src/actions/types.js ***!
   \**********************************************************/
-/*! exports provided: GET_RESULTS, DELETE_RESULT, ADD_RESULT */
+/*! exports provided: GET_RESULTS, DELETE_RESULT, ADD_RESULT, GET_ERRORS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_RESULTS\", function() { return GET_RESULTS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_RESULT\", function() { return DELETE_RESULT; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_RESULT\", function() { return ADD_RESULT; });\nvar GET_RESULTS = 'GET_RESULTS';\nvar DELETE_RESULT = 'DELETE_RESULT';\nvar ADD_RESULT = 'ADD_RESULT';\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/actions/types.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_RESULTS\", function() { return GET_RESULTS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_RESULT\", function() { return DELETE_RESULT; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_RESULT\", function() { return ADD_RESULT; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\nvar GET_RESULTS = 'GET_RESULTS';\nvar DELETE_RESULT = 'DELETE_RESULT';\nvar ADD_RESULT = 'ADD_RESULT';\nvar GET_ERRORS = 'GET_ERRORS';\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/actions/types.js?");
 
 /***/ }),
 
@@ -194,6 +194,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 
 /***/ }),
 
+/***/ "./fifamatchgenerator/frontend/src/reducers/errors.js":
+/*!************************************************************!*\
+  !*** ./fifamatchgenerator/frontend/src/reducers/errors.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./fifamatchgenerator/frontend/src/actions/types.js\");\n\nvar initialState = {\n  msg: {},\n  status: null\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"GET_ERRORS\"]:\n      return {\n        msg: action.payload.msg,\n        status: action.payload.status\n      };\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/reducers/errors.js?");
+
+/***/ }),
+
 /***/ "./fifamatchgenerator/frontend/src/reducers/index.js":
 /*!***********************************************************!*\
   !*** ./fifamatchgenerator/frontend/src/reducers/index.js ***!
@@ -202,7 +214,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _results__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./results */ \"./fifamatchgenerator/frontend/src/reducers/results.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  results: _results__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/reducers/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _results__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./results */ \"./fifamatchgenerator/frontend/src/reducers/results.js\");\n/* harmony import */ var _errors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors */ \"./fifamatchgenerator/frontend/src/reducers/errors.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  results: _results__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  errors: _errors__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./fifamatchgenerator/frontend/src/reducers/index.js?");
 
 /***/ }),
 
