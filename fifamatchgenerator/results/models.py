@@ -6,5 +6,5 @@ class Result(models.Model):
     opponentTeam = models.CharField(max_length=100)
     myGoals = models.PositiveSmallIntegerField()
     opponentGoals = models.PositiveSmallIntegerField()
-    notes = models.CharField(max_length=500)
+    notes = models.CharField(max_length=500, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
