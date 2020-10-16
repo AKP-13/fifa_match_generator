@@ -5,7 +5,9 @@ import { getResults, deleteResult } from '../../actions/results';
 
 export class Results extends Component {
     static propTypes = {
-        results: PropTypes.array.isRequired
+        results: PropTypes.array.isRequired,
+        getResults: PropTypes.func.isRequired,
+        deleteResult: PropTypes.func.isRequired
     }
 
     componentDidMount() {
