@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { createMessage } from './messages';
 
 import { GET_RESULTS, DELETE_RESULT, ADD_RESULT, GET_ERRORS } from './types';
 
@@ -18,6 +19,9 @@ export const getResults = () => dispatch => {
 export const deleteResult = (id) => dispatch => {
     axios.delete(`/api/results/${id}/`)
     .then(res => {
+        dispatch(createMessage({
+            deleteResult: "Result deleted."
+        }))
         dispatch({
             type: DELETE_RESULT,
             payload: id

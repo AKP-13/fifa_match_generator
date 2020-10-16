@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 
 export class Alerts extends Component {
     static propTypes = {
-        error: PropTypes.object.isRequired
+        error: PropTypes.object.isRequired,
+        message: PropTypes.object.isRequired
+
     }
 
     componentDidUpdate(prevProps) {
-        const { error, alert } = this.props;
+        const { error, alert, message } = this.props;
         if(error !== prevProps.error){
             if(error.msg.opponentName) {
                 alert.error(`Opponent name: ${error.msg.opponentName.join()}`) //Comes in as an array so we use join to turn to string
@@ -30,6 +32,12 @@ export class Alerts extends Component {
                 alert.error(`Notes: ${error.msg.notes.join()}`)
             }
         }
+
+        if(message !== prevProps.message) {
+            if(message.deleteResult) {
+                alert.success(message.deleteResult)
+            }
+        }
     }
 
     render() {
@@ -42,7 +50,8 @@ export class Alerts extends Component {
 }
 
 const mapStateToProps = state => ({
-    error: state.errors
+    error: state.errors,
+    message: state.messages
 })
 
 export default connect(mapStateToProps)(withAlert()(Alerts))
