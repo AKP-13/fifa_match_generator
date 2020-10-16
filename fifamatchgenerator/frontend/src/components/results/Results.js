@@ -1,6 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getResults } from '../../actions/results';
 
-export default class Results extends Component {
+export class Results extends Component {
+    static propTypes = {
+        results: PropTypes.array.isRequired
+    }
+
     render() {
         return (
             <div>
@@ -9,3 +16,9 @@ export default class Results extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    results: state.results.results
+});
+
+export default connect(mapStateToProps)(Results);
