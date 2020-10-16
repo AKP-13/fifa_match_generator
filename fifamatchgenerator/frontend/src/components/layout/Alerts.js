@@ -26,6 +26,9 @@ export class Alerts extends Component {
             if(error.msg.opponentGoals) {
                 alert.error(`Opponent Goals: ${error.msg.opponentGoals.join()}`)
             }
+            if(error.msg.notes) {
+                alert.error(`Notes: ${error.msg.notes.join()}`)
+            }
         }
     }
 
