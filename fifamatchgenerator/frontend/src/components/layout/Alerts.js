@@ -11,7 +11,21 @@ export class Alerts extends Component {
     componentDidUpdate(prevProps) {
         const { error, alert } = this.props;
         if(error !== prevProps.error){
-            alert.error('There is an error')
+            if(error.msg.opponentName) {
+                alert.error(`Opponent name: ${error.msg.opponentName.join()}`) //Comes in as an array so we use join to turn to string
+            }
+            if(error.msg.myTeam) {
+                alert.error(`My Team: ${error.msg.myTeam.join()}`)
+            }
+            if(error.msg.opponentTeam) {
+                alert.error(`Opponent Team: ${error.msg.opponentTeam.join()}`)
+            }
+            if(error.msg.myGoals) {
+                alert.error(`My Goals: ${error.msg.myGoals.join()}`)
+            }
+            if(error.msg.opponentGoals) {
+                alert.error(`Opponent Goals: ${error.msg.opponentGoals.join()}`)
+            }
         }
     }
 
