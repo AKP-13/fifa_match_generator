@@ -9,7 +9,8 @@ import {
     LOGIN_FAIL,
     LOGOUT_SUCCESS,
     REGISTER_SUCCESS,
-    REGISTER_FAIL
+    REGISTER_FAIL,
+    CLEAR_RESULTS
 } from './types';
 
 // Check token and load user
@@ -87,6 +88,7 @@ export const register = ({ username, password, email }) => dispatch => {
 export const logout = () => (dispatch, getState) => {
     axios.post('api/auth/logout/', null, tokenConfig(getState))
     .then(res => {
+        dispatch({ type: CLEAR_RESULTS })
         dispatch({
             type: LOGOUT_SUCCESS
         });

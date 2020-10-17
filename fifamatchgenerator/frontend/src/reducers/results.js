@@ -1,4 +1,4 @@
-import { GET_RESULTS, DELETE_RESULT, ADD_RESULT, LOGOUT_SUCCESS } from '../actions/types.js';
+import { GET_RESULTS, DELETE_RESULT, ADD_RESULT, CLEAR_RESULTS } from '../actions/types.js';
 
 const initialState = {
     results: []
@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
                 ...state,
                 results: [...state.results, action.payload]
             }
-        case LOGOUT_SUCCESS:
+        case CLEAR_RESULTS:
             return {
                 ...state,
                 results: []
