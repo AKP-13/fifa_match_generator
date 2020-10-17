@@ -55,6 +55,32 @@ export const login = (username, password) => dispatch => {
     });
 };
 
+// Register user
+export const register = ({ username, password, email }) => dispatch => {
+    // Headers
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    // Request body
+    const body = JSON.stringify({ username, email, password })
+
+    axios.post('api/auth/register', body, config)
+    .then(res => {
+        dispatch({
+            type: REGISTER_SUCCESS,
+            payload: res.data
+        });
+    }).catch(err => {
+        dispatch(returnErrors(err.response.data, err.response.status));
+        dispatch({
+            type: REGISTER_FAIL
+        });
+    });
+};
+
 // Logout User
 export const logout = () => (dispatch, getState) => {
     axios.post('api/auth/logout/', null, tokenConfig(getState))
