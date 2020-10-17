@@ -6,6 +6,7 @@ import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 
 import Header from "./layout/Header";
+import Generator from "./generator/Generator";
 import Dashboard from './results/Dashboard';
 import Alerts from './layout/Alerts';
 import Login from './accounts/Login';
@@ -37,7 +38,8 @@ class App extends Component {
                             <Alerts />
                             <div className="container">
                                 <Switch>
-                                    <PrivateRoute exact path="/" component={Dashboard} />
+                                    <Route exact path="/" component={Generator}/>
+                                    <PrivateRoute exact path="/dashboard" component={Dashboard} />
                                     <Route exact path="/register" component={Register} />
                                     <Route exact path="/login" component={Login} />
                                 </Switch>
