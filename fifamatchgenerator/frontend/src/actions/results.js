@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { createMessage, returnErrors } from './messages';
+import { tokenConfig } from './auth';
 
 import { GET_RESULTS, DELETE_RESULT, ADD_RESULT } from './types';
 
 // GET RESULTS
-export const getResults = () => dispatch => {
-    axios.get('/api/results/')
+export const getResults = () => (dispatch, getState) => {
+    axios.get('/api/results/', tokenConfig(getState))
     .then(res => {
         dispatch({
             type: GET_RESULTS,
@@ -16,8 +17,8 @@ export const getResults = () => dispatch => {
 }
 
 // DELETE RESULT
-export const deleteResult = (id) => dispatch => {
-    axios.delete(`/api/results/${id}/`)
+export const deleteResult = (id) => (dispatch, getState) => {
+    axios.delete(`/api/results/${id}/`, tokenConfig(getState))
     .then(res => {
         dispatch(createMessage({
             deleteResult: "Result deleted."
@@ -31,8 +32,8 @@ export const deleteResult = (id) => dispatch => {
 }
 
 // ADD RESULT
-export const addResult = (result) => dispatch => {
-    axios.post('/api/results/', result)
+export const addResult = (result) => (dispatch, getState) => {
+    axios.post('/api/results/', result, tokenConfig(getState))
     .then(res => {
         dispatch(createMessage({
             addResult: "Result added."
