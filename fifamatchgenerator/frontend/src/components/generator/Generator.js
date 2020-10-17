@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export class Generator extends Component {
+    static propTypes = {
+        isAuthenticated: PropTypes.bool
+    }
+
     render(){
         return (
             <div>
@@ -12,4 +16,8 @@ export class Generator extends Component {
     }
 }
 
-export default connect(null)(Generator);
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps)(Generator);
