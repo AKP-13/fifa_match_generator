@@ -47,8 +47,8 @@ export class Header extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <a className="navbar-brand" href="#">FIFA 21 Random Match Generator</a>
+                        { isAuthenticated ? authLinks : guestLinks}
                     </div>
-                    { isAuthenticated ? authLinks : guestLinks}
                 </div>
             </nav>
         )
