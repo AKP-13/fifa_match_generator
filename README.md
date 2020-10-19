@@ -10,8 +10,9 @@
 
 ## Future Feautures
 
+-   If you randomise to a nation with only one league, disable the randomise league button
 -   Add in team star rating
-    -   This would allow users to be able to filter by teams of a certain star rating
+    -   This would allow users to be able to randomise by teams of a certain star rating
 -   The ability to filter your results on your personal dashboard by friends
 -   Data analysis of results
     -   Average number of goals scored
