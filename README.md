@@ -15,9 +15,12 @@
     -   This would allow users to be able to randomise by teams of a certain star rating
 -   The ability to filter your results on your personal dashboard by friends
 -   Data analysis of results
+    -   Number of wins against each friend
     -   Average number of goals scored
+        -   When playing each friend
         -   When playing as teams of each star rating
     -   Average number of goals conceded
+        -   When playing each friend
         -   When playing as teams of each star rating
 
 ## Technologies
