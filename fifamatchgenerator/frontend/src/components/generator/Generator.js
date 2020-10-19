@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Player1 from './Player1'
+import Player1 from './Player1';
+import Player2 from './Player2'
 
 export class Generator extends Component {
     static propTypes = {
@@ -12,6 +13,7 @@ export class Generator extends Component {
         return (
             <Fragment>
                 <Player1 />
+                <Player2 />
             </Fragment>
         )
     }
