@@ -1,15 +1,15 @@
-#playerOneDiv {
+#playerTwoDiv {
     text-align: center;
 }
 
-#nationOneButton,
-#leagueOneButton,
-#teamOneButton {
+#nationTwoButton,
+#leagueTwoButton,
+#teamTwoButton {
     width: 100%;
     display: block;
     margin: 20px auto 0 auto;
 }
 
-#teamOneButton {
+#teamTwoButton {
     height: 300px;
 }

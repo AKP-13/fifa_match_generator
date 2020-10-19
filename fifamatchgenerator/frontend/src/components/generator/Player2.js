@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { getNation, getLeague, getTeam } from "../../actions/randomiser";
+import "../../../../styles/Player2.css";
 
 export default class Player2 extends Component {
     state = {
@@ -58,37 +59,57 @@ export default class Player2 extends Component {
     render(){
         return (
             <Fragment>
-                <h1>Player 2</h1>
+                <div className="card" id="playerTwoDiv">
+                    <h1>Player 2</h1>
 
-                <button id="nationTwoButton" onClick={this.nationTwoClick}>
-                    Player 2 nation
-                </button>
-                {
-                    this.state.nationTwo &&
-                        <h1>
-                            Player 2's nation: {this.state.nationTwo}
-                        </h1>
-                }
+                    <button id="nationTwoButton" onClick={this.nationTwoClick}>
+                    {
+                        this.state.nationTwo ?
+                            <h1>
+                                {this.state.nationTwo}
+                            </h1>
+                            :
+                            <h1>
+                                <strong>
+                                    Nation
+                                </strong>
+                            </h1>
+                    }
+                    </button>
+                    
 
-                <button id="leagueTwoButton" onClick={this.leagueTwoClick}>
-                    Player 2 league
-                </button>
-                {
-                    this.state.nationTwo && this.state.leagueTwo &&
-                        <h1>
-                            Player 2's league: {this.state.leagueTwo}
-                        </h1>
-                }
+                    <button id="leagueTwoButton" onClick={this.leagueTwoClick}>
+                    {
+                        this.state.nationTwo && this.state.leagueTwo ?
+                            <h1>
+                                {this.state.leagueTwo}
+                            </h1>
+                            :
+                            <h1>
+                                <strong>
+                                    League
+                                </strong>
+                            </h1>
+                    }
+                    </button>
+                    
 
-                <button id="teamTwoButton" onClick={this.teamTwoClick}>
-                    Player 1 team
-                </button>
-                {
-                    this.state.nationTwo && this.state.leagueTwo && this.state.teamTwo &&
-                        <h1>
-                            Player 2's team: {this.state.teamTwo}
-                        </h1>
-                }
+                    <button id="teamTwoButton" onClick={this.teamTwoClick}>
+                    {
+                        this.state.nationTwo && this.state.leagueTwo && this.state.teamTwo ?
+                            <h1>
+                                {this.state.teamTwo}
+                            </h1>
+                            :
+                            <h1>
+                                <strong>
+                                    Team
+                                </strong>
+                            </h1>
+                    }
+                    </button>
+                    
+                </div>
                 
             </Fragment>
         )

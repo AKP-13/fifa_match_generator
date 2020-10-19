@@ -63,34 +63,52 @@ export default class Player1 extends Component {
                     <h1>Player 1</h1>
 
                     <button id="nationOneButton" onClick={this.nationOneClick}>
-                        Player 1 nation
-                    </button>
                     {
-                        this.state.nationOne &&
+                        this.state.nationOne ?
                             <h1>
-                                Player 1's nation: {this.state.nationOne}
+                                {this.state.nationOne}
                             </h1>
-                    }
+                            :
+                            <h1>
+                                <strong>
+                                    Nation
+                                </strong>
+                            </h1>
+                    } 
+                    </button>
+                    
 
                     <button id="leagueOneButton" onClick={this.leagueOneClick}>
-                        Player 1 league
-                    </button>
                     {
-                        this.state.nationOne && this.state.leagueOne &&
+                        this.state.nationOne && this.state.leagueOne ?
                             <h1>
-                                Player 1's league: {this.state.leagueOne}
+                                {this.state.leagueOne}
+                            </h1>
+                            :
+                            <h1>
+                                <strong>
+                                    League
+                                </strong>
                             </h1>
                     }
+                    </button>
+                    
 
                     <button id="teamOneButton" onClick={this.teamOneClick}>
-                        Player 1 team
-                    </button>
                     {
-                        this.state.nationOne && this.state.leagueOne && this.state.teamOne &&
+                        this.state.nationOne && this.state.leagueOne && this.state.teamOne ?
                             <h1>
-                                Player 1's team: {this.state.teamOne}
+                                {this.state.teamOne}
+                            </h1>
+                            :
+                            <h1>
+                                <strong>
+                                    Team
+                                </strong>
                             </h1>
                     }
+                    </button>
+                    
                 </div>
                 
             </Fragment>

@@ -1,0 +1,6 @@
+#generatorsDiv {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    justify-content: center;
+}
