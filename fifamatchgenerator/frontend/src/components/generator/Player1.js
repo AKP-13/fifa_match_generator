@@ -60,19 +60,19 @@ export default class Player1 extends Component {
         return (
             <Fragment>
                 <div className="card" id="playerOneDiv">
-                    <h1>Player 1</h1>
+                    <h1 id="player1h1">Player 1</h1>
 
                     <button id="nationOneButton" onClick={this.nationOneClick}>
                     {
                         this.state.nationOne ?
-                            <h1>
-                                {this.state.nationOne}
-                            </h1>
+                            <strong>
+                                <h1>
+                                    {this.state.nationOne}
+                                </h1>
+                            </strong>
                             :
                             <h1>
-                                <strong>
-                                    Nation
-                                </strong>
+                                Nation
                             </h1>
                     } 
                     </button>
@@ -86,9 +86,7 @@ export default class Player1 extends Component {
                             </h1>
                             :
                             <h1>
-                                <strong>
-                                    League
-                                </strong>
+                                League
                             </h1>
                     }
                     </button>
@@ -102,9 +100,7 @@ export default class Player1 extends Component {
                             </h1>
                             :
                             <h1>
-                                <strong>
-                                    Team
-                                </strong>
+                                Team
                             </h1>
                     }
                     </button>

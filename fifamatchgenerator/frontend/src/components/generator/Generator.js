@@ -14,6 +14,17 @@ export class Generator extends Component {
     render(){
         return (
             <Fragment>
+                <div className="jumbotron jumbotron-fluid" id="jumbotron">
+                    <div className="container" id="jumbotronContainer">
+                        <h1 className="display-4" id="welcomeText">Welcome to the FIFA 21 Random Match Generator!</h1>
+                            <ol>
+                                <li>Randomise the nation</li>
+                                <li>Randomise the league</li>
+                                <li>Randomise the team</li>
+                            </ol>
+                    </div>
+                </div>
+
                 <div id="generatorsDiv" className="grid-container">
                     <Player1 className="grid-item" />
                     <Filters className="grid-item" />

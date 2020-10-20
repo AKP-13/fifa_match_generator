@@ -60,7 +60,7 @@ export default class Player2 extends Component {
         return (
             <Fragment>
                 <div className="card" id="playerTwoDiv">
-                    <h1>Player 2</h1>
+                    <h1 id="player2h1">Player 2</h1>
 
                     <button id="nationTwoButton" onClick={this.nationTwoClick}>
                     {
@@ -70,9 +70,7 @@ export default class Player2 extends Component {
                             </h1>
                             :
                             <h1>
-                                <strong>
-                                    Nation
-                                </strong>
+                                Nation
                             </h1>
                     }
                     </button>
@@ -86,9 +84,7 @@ export default class Player2 extends Component {
                             </h1>
                             :
                             <h1>
-                                <strong>
-                                    League
-                                </strong>
+                                League
                             </h1>
                     }
                     </button>
@@ -102,9 +98,7 @@ export default class Player2 extends Component {
                             </h1>
                             :
                             <h1>
-                                <strong>
-                                    Team
-                                </strong>
+                                Team
                             </h1>
                     }
                     </button>

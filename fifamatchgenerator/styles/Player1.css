@@ -1,5 +1,8 @@
 #playerOneDiv {
     text-align: center;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
 }
 
 #nationOneButton,
@@ -8,8 +11,17 @@
     width: 100%;
     display: block;
     margin: 20px auto 0 auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
 }
 
 #teamOneButton {
     height: 300px;
+}
+
+#player1h1 {
+    font-size: 1rem;
+    color: white;
 }
