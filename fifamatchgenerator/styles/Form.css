@@ -1,0 +1,29 @@
+#resultsForm {
+    border-radius: 5px;
+}
+
+#resultsForm form .form-control {
+    border-radius: 5px;
+}
+
+#asterisk {
+    color: red;
+}
+
+#resultsFormSubmitButton {
+    border-radius: 5px;
+}
+
+#opponentNameFormRow,
+#notesFormRow {
+    justify-content: center;
+}
+
+#addResultHeading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#addResultForm {
+    text-align: center;
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addResult } from '../../actions/results'
+import { addResult } from '../../actions/results';
+
+import "../../../../styles/Form.css";
 
 export class Form extends Component {
     state = {
@@ -17,11 +19,21 @@ export class Form extends Component {
         addResult: PropTypes.func.isRequired
     }
 
-    onChange = e => this.setState({ [e.target.name]: e.target.value })
+    onChange = e => this.setState({ 
+        [e.target.name]: e.target.value 
+    })
 
     onSubmit = e => {
         e.preventDefault();
-        const { opponentName, myTeam, myGoals, opponentGoals, opponentTeam, notes } = this.state;
+        const { 
+            opponentName, 
+            myTeam, 
+            myGoals, 
+            opponentGoals, 
+            opponentTeam, 
+            notes 
+        } = this.state;
+
         const result = {
             opponentName,
             myTeam,
@@ -30,7 +42,9 @@ export class Form extends Component {
             opponentTeam,
             notes
         };
+
         this.props.addResult(result)
+        
         this.setState({
             opponentName: "",
             myTeam: "",
@@ -43,79 +57,131 @@ export class Form extends Component {
 
     render() {
 
-        const { opponentName, myTeam, myGoals, opponentGoals, opponentTeam, notes } = this.state;
+        const { 
+            opponentName, 
+            myTeam, 
+            myGoals, 
+            opponentGoals, 
+            opponentTeam, 
+            notes 
+        } = this.state;
 
         return (
-            <div className="card card-body mt-4 mb-4">
-                <h2>Add Result</h2>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Opponent Name</label>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="opponentName"
-                            onChange={this.onChange}
-                            value={opponentName}
-                        />
+            <div className="card card-body mt-4 mb-4" id="resultsForm">
+                <h2 id="addResultHeading">
+                    Add Result
+                </h2>
+                <form onSubmit={this.onSubmit} id="addResultForm">
+                    <div className="form-row" id="opponentNameFormRow">
+                        <div className="col col-md-6">
+                            <div className="form-group">
+                                <label htmlFor="opponentName">
+                                    Opponent Name <span id="asterisk">*</span>
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="text"
+                                    name="opponentName"
+                                    id="opponentName"
+                                    onChange={this.onChange}
+                                    value={opponentName}
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label>My Team</label>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="myTeam"
-                            onChange={this.onChange}
-                            value={myTeam}
-                        />
+
+                    <div className="form-row">
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="myTeam">
+                                    My Team <span id="asterisk">*</span>
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="text"
+                                    name="myTeam"
+                                    id="myTeam"
+                                    onChange={this.onChange}
+                                    value={myTeam}
+                                />
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="opponentTeam">
+                                    Opponent Team <span id="asterisk">*</span>
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="text"
+                                    name="opponentTeam"
+                                    id="opponentTeam"
+                                    onChange={this.onChange}
+                                    value={opponentTeam}
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label>My Goals</label>
-                        <input
-                            className="form-control"
-                            type="number"
-                            min="0"
-                            name="myGoals"
-                            onChange={this.onChange}
-                            value={myGoals}
-                        />
+                    
+                    <div className="form-row">
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="myGoals">
+                                    My Goals <span id="asterisk">*</span>
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="number"
+                                    min="0"
+                                    name="myGoals"
+                                    id="myGoals"
+                                    onChange={this.onChange}
+                                    value={myGoals}
+                                />
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="opponentGoals">
+                                    Opponent Goals <span id="asterisk">*</span>
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="number"
+                                    min="0"
+                                    name="opponentGoals"
+                                    id="opponentGoals"
+                                    onChange={this.onChange}
+                                    value={opponentGoals}
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label>Opponent Goals</label>
-                        <input
-                            className="form-control"
-                            type="number"
-                            min="0"
-                            name="opponentGoals"
-                            onChange={this.onChange}
-                            value={opponentGoals}
-                        />
+                    
+                    <div className="form-row" id="notesFormRow">
+                        <div className="col col-md-6">
+                            <div className="form-group">
+                                <label htmlFor="notes">
+                                    Notes
+                                </label>
+                                <textarea
+                                    className="form-control"
+                                    type="text"
+                                    name="notes"
+                                    id="notes"
+                                    onChange={this.onChange}
+                                    value={notes}
+                                />
+                            </div>
+                        </div>
                     </div>
+                    
                     <div className="form-group">
-                        <label>Opponent Team</label>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="opponentTeam"
-                            onChange={this.onChange}
-                            value={opponentTeam}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Notes</label>
-                        <textarea
-                            className="form-control"
-                            type="text"
-                            name="notes"
-                            onChange={this.onChange}
-                            value={notes}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <button type="submit" className="btn btn-primary">
-                        Submit
+                        <button type="submit" className="btn btn-primary" id="resultsFormSubmitButton">
+                            Submit
                         </button>
                     </div>
+
                 </form>
             </div>
         )

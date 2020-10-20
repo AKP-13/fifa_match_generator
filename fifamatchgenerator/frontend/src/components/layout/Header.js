@@ -26,7 +26,7 @@ export class Header extends Component {
                     <Link to="/dashboard" className="nav-link" >Results</Link>
                 </li>
                 <li className="nav-item">
-                    <button onClick={this.props.logout} className="nav-link btn btn-info btn-sm text-light">
+                    <button onClick={this.props.logout} className="nav-link btn btn-info btn-sm text-light" id="logoutButton">
                         Logout
                     </button>
                 </li>

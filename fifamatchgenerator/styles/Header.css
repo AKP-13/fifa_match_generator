@@ -3,3 +3,7 @@
     font-weight: 400;
     font-style: italic;
 }
+
+#logoutButton {
+    border-radius: 5px;
+}
