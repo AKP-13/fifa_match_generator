@@ -22,6 +22,8 @@
     -   Average number of goals conceded
         -   When playing each friend
         -   When playing as teams of each star rating
+-   Make the alert that pops up to tell you that you cant shuffle a team without having shuffled a nation and league more visually pleasing
+-   Add in GDPR compliance
 
 ## Technologies
 
