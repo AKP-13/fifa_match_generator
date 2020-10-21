@@ -41,3 +41,5 @@
 -   [Django Documentation](https://www.djangoproject.com/) - Provided help in the set up of my models.
 
 -   [gitignore.io](https://www.toptal.com/developers/gitignore) - `.gitignore` content for React.
+-   [Pretty Printed Tutorial](https://www.youtube.com/watch?v=Y4c4ickks2A) - How to deploy the site to [PythonAnywhere](https://www.pythonanywhere.com/).
+-   [PythonAnywhere Documentation](https://help.pythonanywhere.com/pages/DeployExistingDjangoProject/) - How to deploy the site to [PythonAnywhere](https://www.pythonanywhere.com/).
