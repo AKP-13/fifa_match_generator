@@ -1,0 +1,8 @@
+#registerCard,
+#username,
+#email,
+#password,
+#confirmPassword,
+#registerButton {
+    border-radius: 5px;
+}

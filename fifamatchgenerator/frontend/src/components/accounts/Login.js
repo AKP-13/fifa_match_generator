@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 
+import "../../../../styles/Login.css";
+
 export class Login extends Component {
     state = {
         username: '',
@@ -35,31 +37,33 @@ export class Login extends Component {
         const { username, password } = this.state;
         return (
             <div className="col-md-6 m-auto">
-                <div className="card card-body mt-5">
+                <div className="card card-body mt-5" id="loginCard">
                 <h2 className="text-center">Login</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                    <label>Username</label>
+                    <label htmlFor="username">Username</label>
                     <input
                         type="text"
                         className="form-control"
                         name="username"
+                        id="username"
                         onChange={this.onChange}
                         value={username}
                     />
                     </div>
                     <div className="form-group">
-                    <label>Password</label>
+                    <label htmlFor="password">Password</label>
                     <input
                         type="password"
                         className="form-control"
                         name="password"
+                        id="password"
                         onChange={this.onChange}
                         value={password}
                     />
                     </div>
                     <div className="form-group">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-primary" id="loginButton">
                         Login
                     </button>
                     </div>
