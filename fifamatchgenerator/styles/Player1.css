@@ -8,13 +8,25 @@
 #nationOneButton,
 #leagueOneButton,
 #teamOneButton {
-    width: 100%;
+    width: 300px;
     display: block;
     margin: 20px auto 0 auto;
     border: 1px solid white;
     border-radius: 5px;
     background: transparent;
     color: white;
+}
+
+#nationOneButton h1 {
+    font-size: 2rem;
+}
+
+#leagueOneButton h1 {
+    font-size: 2rem;
+}
+
+#teamOneButton h1 {
+    font-size: 2rem;
 }
 
 #teamOneButton {
@@ -24,4 +36,44 @@
 #player1h1 {
     font-size: 1rem;
     color: white;
+}
+
+@media screen and (max-width: 991px) {
+    #nationOneButton,
+    #leagueOneButton,
+    #teamOneButton {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #nationOneButton,
+    #leagueOneButton,
+    #teamOneButton {
+        width: 160px;
+    }
+
+    #nationOneButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #leagueOneButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #teamOneButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #teamOneButton {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    #nationOneButton,
+    #leagueOneButton,
+    #teamOneButton {
+        width: 100px;
+    }
 }

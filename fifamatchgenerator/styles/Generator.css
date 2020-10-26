@@ -1,8 +1,22 @@
+#player1Component {
+    grid-area: player1;
+}
+
+#player2Component {
+    grid-area: player2;
+}
+
+#filtersComponent {
+    grid-area: filters;
+}
+
 #generatorsDiv {
     margin-top: 50px;
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-areas: "player1 player2";
+    grid-template-rows: 80% 20%;
+    grid-gap: 10px;
     justify-content: center;
     background: rgba(0, 0, 0, 0.6);
     padding: 40px;
@@ -15,9 +29,24 @@
 
 #welcomeText {
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 #jumbotronContainer ol {
     text-align: center;
     list-style-position: inside;
+}
+
+@media screen and (max-width: 767px) {
+    #welcomeText {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #welcomeText {
+        font-size: 2.35rem;
+    }
 }

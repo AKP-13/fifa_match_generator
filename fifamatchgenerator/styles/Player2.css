@@ -8,13 +8,25 @@
 #nationTwoButton,
 #leagueTwoButton,
 #teamTwoButton {
-    width: 100%;
+    width: 300px;
     display: block;
     margin: 20px auto 0 auto;
     border: 1px solid white;
     border-radius: 5px;
     background: transparent;
     color: white;
+}
+
+#nationTwoButton h1 {
+    font-size: 2rem;
+}
+
+#leagueTwoButton h1 {
+    font-size: 2rem;
+}
+
+#teamTwoButton h1 {
+    font-size: 2rem;
 }
 
 #teamTwoButton {
@@ -24,4 +36,44 @@
 #player2h1 {
     font-size: 1rem;
     color: white;
+}
+
+@media screen and (max-width: 991px) {
+    #nationTwoButton,
+    #leagueTwoButton,
+    #teamTwoButton {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #nationTwoButton,
+    #leagueTwoButton,
+    #teamTwoButton {
+        width: 160px;
+    }
+
+    #nationTwoButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #leagueTwoButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #teamTwoButton h1 {
+        font-size: 1.4rem;
+    }
+
+    #teamTwoButton {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    #nationTwoButton,
+    #leagueTwoButton,
+    #teamTwoButton {
+        width: 100px;
+    }
 }

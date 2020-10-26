@@ -26,9 +26,9 @@ export class Generator extends Component {
                 </div>
 
                 <div id="generatorsDiv" className="grid-container">
-                    <Player1 className="grid-item" />
-                    <Filters className="grid-item" />
-                    <Player2 className="grid-item" />
+                    <Player1 id="player1Component" />
+                    <Player2 id="player2Component" />
+                    <Filters id="filtersComponent" />
                 </div>
             </Fragment>
         )
