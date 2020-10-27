@@ -11,3 +11,13 @@
 #hamburgerButton {
     border-radius: 5px;
 }
+
+@media screen and (max-width: 319px) {
+    #headerBrand {
+        font-size: 1rem;
+    }
+
+    #guestLinks {
+        font-size: 0.8rem;
+    }
+}

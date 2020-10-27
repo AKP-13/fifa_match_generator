@@ -34,7 +34,7 @@ export class Header extends Component {
         );
 
         const guestLinks = (
-            <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+            <ul className="navbar-nav ml-auto mt-2 mt-lg-0" id="guestLinks">
                 <li className="nav-item">
                     <Link to="/register" className="nav-link">Register</Link>
                 </li>
@@ -51,7 +51,7 @@ export class Header extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a className="navbar-brand" href="#">FIFA 21 Random Match Generator</a>
+                        <a className="navbar-brand" href="#" id="headerBrand">FIFA 21 Random Match Generator</a>
                         { isAuthenticated ? authLinks : guestLinks}
                     </div>
                 </div>
