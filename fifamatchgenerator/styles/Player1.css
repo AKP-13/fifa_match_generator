@@ -17,6 +17,12 @@
     color: white;
 }
 
+#nationOneButton:hover,
+#leagueOneButton:hover,
+#teamOneButton:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 #nationOneButton h1 {
     font-size: 2rem;
 }
@@ -74,6 +80,54 @@
     #nationOneButton,
     #leagueOneButton,
     #teamOneButton {
+        width: 130px;
+    }
+
+    #nationOneButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #leagueOneButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #teamOneButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #teamOneButton {
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #nationOneButton,
+    #leagueOneButton,
+    #teamOneButton {
+        width: 115px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #nationOneButton,
+    #leagueOneButton,
+    #teamOneButton {
         width: 100px;
+    }
+
+    #nationOneButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #leagueOneButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #teamOneButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #teamOneButton {
+        height: 150px;
     }
 }

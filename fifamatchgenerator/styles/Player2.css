@@ -17,6 +17,12 @@
     color: white;
 }
 
+#nationTwoButton:hover,
+#leagueTwoButton:hover,
+#teamTwoButton:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 #nationTwoButton h1 {
     font-size: 2rem;
 }
@@ -74,6 +80,54 @@
     #nationTwoButton,
     #leagueTwoButton,
     #teamTwoButton {
+        width: 130px;
+    }
+
+    #nationTwoButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #leagueTwoButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #teamTwoButton h1 {
+        font-size: 1.1rem;
+    }
+
+    #teamTwoButton {
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #nationTwoButton,
+    #leagueTwoButton,
+    #teamTwoButton {
+        width: 115px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #nationTwoButton,
+    #leagueTwoButton,
+    #teamTwoButton {
         width: 100px;
+    }
+
+    #nationTwoButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #leagueTwoButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #teamTwoButton h1 {
+        font-size: 0.9rem;
+    }
+
+    #teamTwoButton {
+        height: 150px;
     }
 }
