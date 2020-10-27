@@ -2,10 +2,17 @@
     text-align: center;
     align-self: center;
     color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 991px) {
     #filtersText {
         width: 100px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #filtersText {
+        font-size: 0.8rem;
     }
 }
