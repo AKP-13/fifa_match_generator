@@ -4,8 +4,6 @@
 
 #tableBackground {
     background: #ffffff;
-    margin-top: 50px;
-    margin-bottom: 50px;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0;
 }

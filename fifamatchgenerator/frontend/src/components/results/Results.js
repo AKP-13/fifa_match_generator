@@ -19,36 +19,37 @@ export class Results extends Component {
     render() {
         return (
             <Fragment>
-                <h2>Results</h2>
-
-                <div id="tableBackground">
-                    <table className="table table-striped">
-                        <thead className="thead-dark">
-                            <tr>
-                                <th>Opponent Name</th>
-                                <th>My Team</th>
-                                <th>My Goals</th>
-                                <th>Opponent Goals</th>
-                                <th>Opponent Team</th>
-                                <th>Notes</th>
-                                <th />
-                            </tr>
-                        </thead>
-                        <tbody>
-                            { this.props.results.map(result => (
-                                <tr key={result.id}>
-                                    <td>{result.opponentName}</td>
-                                    <td>{result.myTeam}</td>
-                                    <td>{result.myGoals}</td>
-                                    <td>{result.opponentGoals}</td>
-                                    <td>{result.opponentTeam}</td>
-                                    <td>{result.notes}</td>
-                                    <td><button onClick={this.props.deleteResult.bind(this, result.id)} className="btn btn-danger btn-sm" id="resultsDeleteButton">Delete</button></td>
+                <div className="table-responsive" id="tableBackground">
+                    <div id="tableBackground">
+                        <table className="table table-striped">
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th>Opponent Name</th>
+                                    <th>My Team</th>
+                                    <th>My Goals</th>
+                                    <th>Opponent Goals</th>
+                                    <th>Opponent Team</th>
+                                    <th>Notes</th>
+                                    <th />
                                 </tr>
-                            )) }
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                { this.props.results.map(result => (
+                                    <tr key={result.id}>
+                                        <td>{result.opponentName}</td>
+                                        <td>{result.myTeam}</td>
+                                        <td>{result.myGoals}</td>
+                                        <td>{result.opponentGoals}</td>
+                                        <td>{result.opponentTeam}</td>
+                                        <td>{result.notes}</td>
+                                        <td><button onClick={this.props.deleteResult.bind(this, result.id)} className="btn btn-danger btn-sm" id="resultsDeleteButton">Delete</button></td>
+                                    </tr>
+                                )) }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                
 
             </Fragment>
         )
