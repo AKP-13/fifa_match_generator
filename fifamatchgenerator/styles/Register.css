@@ -6,3 +6,35 @@
 #registerButton {
     border-radius: 5px;
 }
+
+input#username,
+input#email,
+input#password,
+input#confirmPassword {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.loginRegisterCard {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+label {
+    color: white;
+    margin: 0;
+}
+
+.loginRegTitle {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loginRegisterText {
+    color: rgba(255, 255, 255, 0.6);
+}

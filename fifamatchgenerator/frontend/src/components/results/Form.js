@@ -1,37 +1,38 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { addResult } from '../../actions/results';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addResult } from "../../actions/results";
 
 import "../../../../styles/Form.css";
 
 export class Form extends Component {
     state = {
-        opponentName: '',
-        myTeam: '',
-        myGoals: '',
-        opponentGoals: '',
-        opponentTeam: '',
-        notes: ''
-    }
+        opponentName: "",
+        myTeam: "",
+        myGoals: "",
+        opponentGoals: "",
+        opponentTeam: "",
+        notes: "",
+    };
 
     static propTypes = {
-        addResult: PropTypes.func.isRequired
-    }
+        addResult: PropTypes.func.isRequired,
+    };
 
-    onChange = e => this.setState({ 
-        [e.target.name]: e.target.value 
-    })
+    onChange = (e) =>
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
 
-    onSubmit = e => {
+    onSubmit = (e) => {
         e.preventDefault();
-        const { 
-            opponentName, 
-            myTeam, 
-            myGoals, 
-            opponentGoals, 
-            opponentTeam, 
-            notes 
+        const {
+            opponentName,
+            myTeam,
+            myGoals,
+            opponentGoals,
+            opponentTeam,
+            notes,
         } = this.state;
 
         const result = {
@@ -40,37 +41,34 @@ export class Form extends Component {
             myGoals,
             opponentGoals,
             opponentTeam,
-            notes
+            notes,
         };
 
-        this.props.addResult(result)
-        
+        this.props.addResult(result);
+
         this.setState({
             opponentName: "",
             myTeam: "",
             myGoals: "",
             opponentGoals: "",
             opponentTeam: "",
-            notes: ""
-        })
-    }
+            notes: "",
+        });
+    };
 
     render() {
-
-        const { 
-            opponentName, 
-            myTeam, 
-            myGoals, 
-            opponentGoals, 
-            opponentTeam, 
-            notes 
+        const {
+            opponentName,
+            myTeam,
+            myGoals,
+            opponentGoals,
+            opponentTeam,
+            notes,
         } = this.state;
 
         return (
-            <div className="card card-body mt-4 mb-4" id="resultsForm">
-                <h2 id="addResultHeading">
-                    Add Result
-                </h2>
+            <div className="card card-body mt-4 mb-4 loginRegisterCard">
+                <h2 className="loginRegTitle">Add Result</h2>
                 <form onSubmit={this.onSubmit} id="addResultForm">
                     <div className="form-row" id="opponentNameFormRow">
                         <div className="col col-md-6">
@@ -122,7 +120,7 @@ export class Form extends Component {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="form-row">
                         <div className="col">
                             <div className="form-group">
@@ -157,13 +155,11 @@ export class Form extends Component {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="form-row" id="notesFormRow">
                         <div className="col col-md-6">
                             <div className="form-group">
-                                <label htmlFor="notes">
-                                    Notes
-                                </label>
+                                <label htmlFor="notes">Notes</label>
                                 <textarea
                                     className="form-control"
                                     type="text"
@@ -175,16 +171,19 @@ export class Form extends Component {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary" id="resultsFormSubmitButton">
+                        <button
+                            type="submit"
+                            className="btn btn-primary"
+                            id="resultsFormSubmitButton"
+                        >
                             Submit
                         </button>
                     </div>
-
                 </form>
             </div>
-        )
+        );
     }
 }
 

@@ -4,3 +4,7 @@
 #loginButton {
     border-radius: 5px;
 }
+
+.loginRegisterCard {
+    background: rgba(0, 0, 0, 0.6);
+}
