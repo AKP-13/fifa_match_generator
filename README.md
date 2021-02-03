@@ -1,8 +1,6 @@
 # FIFA 21 Random Match Generator
 
--   There’s nothing better than meeting up and getting one over on your mate on FIFA, securing that hard fought victory with one shot on target (compared to your friend’s 17) after parking the bus and taking your chance in that one counter attack. The only downside is that there’s no record of it if you play an offline Kick-Off Match...
-
--   It can get a bit repetitive always playing as the same teams in FIFA. This application solves that by allowing a user to generate two random teams for themselves and a friend to play with in a FIFA 21 match with the ability to create an account and track their previous results against their friends.
+-   It can get a bit repetitive always playing as the same teams in FIFA. This application solves that by allowing a user to generate two random teams for themselves and a friend to play with in FIFA 21 with the option of signing in and recording their results against each of their friends.
 
 ## Background
 
@@ -34,6 +32,7 @@
 -   React
 -   Redux
 -   Bootstrap
+-   [iconify](https://iconify.design)
 
 ### References
 
