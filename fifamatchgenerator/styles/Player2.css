@@ -23,12 +23,12 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-#nationTwoButton h1 {
-    font-size: 2rem;
-}
-
+#nationTwoButton h1,
 #leagueTwoButton h1 {
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #teamTwoButton h1 {
@@ -50,6 +50,10 @@
     #teamTwoButton {
         width: 300px;
     }
+
+    #leagueTwoButton h1 {
+        height: 70px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -65,6 +69,7 @@
 
     #leagueTwoButton h1 {
         font-size: 1.4rem;
+        height: 50px;
     }
 
     #teamTwoButton h1 {
@@ -89,6 +94,7 @@
 
     #leagueTwoButton h1 {
         font-size: 1.2rem;
+        height: 40px;
     }
 
     #teamTwoButton h1 {
@@ -107,16 +113,15 @@
         width: 150px;
     }
 
-    #nationTwoButton h1 {
-        font-size: 1.1rem;
-    }
-
-    #leagueTwoButton h1 {
-        font-size: 1.1rem;
-    }
-
+    #nationTwoButton h1,
+    #leagueTwoButton h1,
     #teamTwoButton h1 {
         font-size: 1.1rem;
+    }
+
+    #nationTwoButton h1,
+    #leagueTwoButton h1 {
+        height: 35px;
     }
 
     #teamTwoButton {
@@ -131,16 +136,15 @@
         width: 140px;
     }
 
-    #nationTwoButton h1 {
+    #nationTwoButton h1,
+    #leagueTwoButton h1,
+    #teamsTwoButton h1 {
         font-size: 0.9rem;
     }
 
+    #nationTwoButton h1,
     #leagueTwoButton h1 {
-        font-size: 0.9rem;
-    }
-
-    #teamTwoButton h1 {
-        font-size: 0.9rem;
+        height: 30px;
     }
 
     #teamTwoButton {
