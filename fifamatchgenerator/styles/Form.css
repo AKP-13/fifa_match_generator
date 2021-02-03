@@ -14,10 +14,17 @@ textarea#notes {
     border-bottom: 1px solid white;
     margin-bottom: 60px;
     color: white;
+    text-align: center;
 }
 
 #resultsForm form .form-control {
     border-radius: 5px;
+}
+
+.goals {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 #asterisk {

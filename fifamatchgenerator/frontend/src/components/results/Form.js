@@ -83,6 +83,7 @@ export class Form extends Component {
                                     id="opponentName"
                                     onChange={this.onChange}
                                     value={opponentName}
+                                    placeholder="Harvey"
                                 />
                             </div>
                         </div>
@@ -101,6 +102,7 @@ export class Form extends Component {
                                     id="myTeam"
                                     onChange={this.onChange}
                                     value={myTeam}
+                                    placeholder="Spurs"
                                 />
                             </div>
                         </div>
@@ -116,6 +118,7 @@ export class Form extends Component {
                                     id="opponentTeam"
                                     onChange={this.onChange}
                                     value={opponentTeam}
+                                    placeholder="Arsenal"
                                 />
                             </div>
                         </div>
@@ -128,13 +131,14 @@ export class Form extends Component {
                                     My Goals <span id="asterisk">*</span>
                                 </label>
                                 <input
-                                    className="form-control"
+                                    className="form-control goals"
                                     type="number"
                                     min="0"
                                     name="myGoals"
                                     id="myGoals"
                                     onChange={this.onChange}
                                     value={myGoals}
+                                    placeholder="3"
                                 />
                             </div>
                         </div>
@@ -144,13 +148,14 @@ export class Form extends Component {
                                     Opponent Goals <span id="asterisk">*</span>
                                 </label>
                                 <input
-                                    className="form-control"
+                                    className="form-control goals"
                                     type="number"
                                     min="0"
                                     name="opponentGoals"
                                     id="opponentGoals"
                                     onChange={this.onChange}
                                     value={opponentGoals}
+                                    placeholder="0"
                                 />
                             </div>
                         </div>
@@ -167,6 +172,7 @@ export class Form extends Component {
                                     id="notes"
                                     onChange={this.onChange}
                                     value={notes}
+                                    placeholder="#COYS"
                                 />
                             </div>
                         </div>
