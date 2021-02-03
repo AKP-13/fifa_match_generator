@@ -27,6 +27,12 @@ textarea#notes {
     margin: 0 auto;
 }
 
+#addResultButton {
+    border-radius: 5px;
+    display: contents;
+    font-size: xx-large;
+}
+
 #asterisk {
     color: red;
 }
