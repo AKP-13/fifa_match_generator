@@ -56,6 +56,7 @@
 
 #jumbotron {
     border-radius: 0 0 5px 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 #welcomeText {
@@ -73,6 +74,10 @@
 @media screen and (max-width: 767px) {
     #welcomeText {
         font-size: 2.5rem;
+    }
+
+    #generatorsDiv {
+        padding: 40px 0px;
     }
 }
 

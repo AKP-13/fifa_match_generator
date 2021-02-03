@@ -2,8 +2,35 @@
     border-radius: 5px;
 }
 
+input#opponentName,
+input#myTeam,
+input#opponentTeam,
+input#myGoals,
+input#opponentGoals,
+textarea#notes {
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 60px;
+    color: white;
+    text-align: center;
+}
+
 #resultsForm form .form-control {
     border-radius: 5px;
+}
+
+.goals {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#addResultButton {
+    border-radius: 5px;
+    display: contents;
+    font-size: xx-large;
 }
 
 #asterisk {
@@ -17,14 +44,6 @@
 #opponentNameFormRow,
 #notesFormRow {
     justify-content: center;
-}
-
-#addResultHeading {
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
 }
 
 #addResultForm {

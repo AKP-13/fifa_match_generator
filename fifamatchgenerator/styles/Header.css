@@ -4,6 +4,14 @@
     font-style: italic;
 }
 
+#headerBrand {
+    color: darkorchid;
+}
+
+#headerBrand:hover {
+    text-shadow: 0 10px 20px rgb(0 0 0 / 20%), 0 4px 8px rgb(0 0 0 / 10%);
+}
+
 #logoutButton {
     border-radius: 5px;
 }
