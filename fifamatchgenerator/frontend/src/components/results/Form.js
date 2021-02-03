@@ -59,7 +59,6 @@ export class Form extends Component {
             opponentGoals: "",
             opponentTeam: "",
             notes: "",
-            add: false,
         });
     };
 
