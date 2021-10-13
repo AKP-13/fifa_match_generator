@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { getResults, deleteResult } from '../../actions/results';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getResults, deleteResult } from "../../actions/results";
 
 import "../../../../styles/Results.css";
 
@@ -9,8 +9,8 @@ export class Results extends Component {
     static propTypes = {
         results: PropTypes.array.isRequired,
         getResults: PropTypes.func.isRequired,
-        deleteResult: PropTypes.func.isRequired
-    }
+        deleteResult: PropTypes.func.isRequired,
+    };
 
     componentDidMount() {
         this.props.getResults();
@@ -34,7 +34,7 @@ export class Results extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                { this.props.results.map(result => (
+                                {this.props.results.map((result) => (
                                     <tr key={result.id}>
                                         <td>{result.opponentName}</td>
                                         <td>{result.myTeam}</td>
@@ -42,22 +42,31 @@ export class Results extends Component {
                                         <td>{result.opponentGoals}</td>
                                         <td>{result.opponentTeam}</td>
                                         <td>{result.notes}</td>
-                                        <td><button onClick={this.props.deleteResult.bind(this, result.id)} className="btn btn-danger btn-sm" id="resultsDeleteButton">Delete</button></td>
+                                        <td>
+                                            <button
+                                                onClick={this.props.deleteResult.bind(
+                                                    this,
+                                                    result.id
+                                                )}
+                                                className="btn btn-danger btn-sm"
+                                                id="resultsDeleteButton"
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
                                     </tr>
-                                )) }
+                                ))}
                             </tbody>
                         </table>
                     </div>
                 </div>
-                
-
             </Fragment>
-        )
+        );
     }
 }
 
-const mapStateToProps = state => ({
-    results: state.results.results
+const mapStateToProps = (state) => ({
+    results: state.results.results,
 });
 
 export default connect(mapStateToProps, { getResults, deleteResult })(Results);
